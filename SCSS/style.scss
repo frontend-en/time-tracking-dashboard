@@ -1,0 +1,246 @@
+@import "./_fonts";
+@import "./_reset";
+@import "./_functions";
+
+// colors
+$Blue: hsl(246, 80%, 60%); //5847eb
+$darkNavy: hsl(226, 43%, 10%); //0E1323
+$darkBlue: hsl(235, 46%, 20%); // 1C204B
+$LightRed: hsl(15, 100%, 70%); //ff8c66
+$SoftBlue: hsl(195, 74%, 62%); //56c2e6
+$LightRed: hsl(348, 100%, 68%); //ff5c7c
+$LimeGreen: hsl(145, 58%, 55%); //4acf81
+$Violet: hsl(264, 64%, 52%); //7536d3
+$VioletLight: hsl(246, 80%, 60%); //5747ea
+$SoftOrange: hsl(43, 84%, 65%); //f1c65b
+
+:root {
+  font-family: "Rubik Regular", sans-serif;
+  color: $Blue;
+}
+
+body {
+  background-color: $darkNavy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  @media (min-width: 1024px) {
+    display: grid;
+    max-width: rem(1110px);
+    gap: rem(30px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+
+.item1 {
+  @media (min-width: 1024px) {
+    grid-row: 1/3;
+  }
+
+}
+
+.item2 {
+}
+
+.card-peson {
+  background-color: $darkBlue;
+  border-radius: 15px;
+  // .card-peson__report
+  &__intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(20px);
+    background-color: $VioletLight;
+    border-radius: 15px;
+    height: rem(133px);
+    @media (min-width: 1024px) {
+      height: initial;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: rem(37px) rem(32px) rem(80px);
+      gap: 2.9rem;
+    }
+  }
+  &__img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    @media (min-width: 1024px) {
+      width: 79px;
+      height: 79px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+  
+  &__report {
+    font-size: 15px;
+    color: #bbc0ff;
+  }
+  
+  // .card-peson__name
+  
+  &__name {
+    font-weight: 300;
+    font-size: 24px;
+    color: #fff;
+    font-family: "Rubik Light";
+    @media (min-width: 1024px) {
+      font-size: rem(40px);
+      font-family: "Rubik Light";
+    }
+    
+  }
+  
+  // .card-peson__buttons
+  
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(45px);
+    padding: 1.4rem 0;
+
+    @media (min-width: 1024px) {
+      flex-direction: column;
+      gap: 1.06rem;
+      padding: rem(25px) rem(26px) rem(32px);
+      align-items: flex-start;
+      font-family: "Rubik Regular";
+      font-size: 18px;
+    }
+  }
+  
+  // .card-peson__button
+  
+  &__button {
+    color: #7078c9;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      color: #FFF;
+    }
+  }
+  }
+  
+.card {
+  min-width: rem(327px);
+  border-radius: rem(15px);
+  background: linear-gradient(180deg, rgba(255,139,96,1) 50%, rgba(14,19,35,1) 50%);
+  position: relative;
+  padding-top: rem(38px);
+  overflow: hidden;
+  @media (min-width: 1024px) {
+    min-width: initial;
+     padding-top: rem(44px);
+  }
+
+// .card__decore
+
+&__decore {
+  width: rem(79px);
+  height: rem(68px);
+  position: absolute;
+  right: 17px;
+  top: -8px;
+  
+
+}
+// .card__content
+&__content {
+  background-color: $darkBlue;
+  border-radius: 15px;
+  padding: rem(28px) rem(24px);
+  position: relative;
+  z-index: 1;
+  @media (min-width: 1024px) {
+    padding: rem(23px) rem(30px) rem(30px);
+  }
+
+}
+// .card__busy
+
+
+&__busy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Rubik Medium";
+}
+
+// .card__type
+
+&__type {
+  font-family: "Rubik Medium";
+}
+
+// .card__dots
+
+&__dots {
+  color: #BBC0FF;
+  margin-bottom: rem(10px);
+  letter-spacing: 0.1rem;
+  font-size: rem(24px);
+  font-family: "Rubik Medium";
+}
+// .card-peson__data
+
+&__data {
+}
+
+
+// .card__hours
+
+&__hours {
+  margin-top: rem(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  @media (min-width: 1024px) {
+    display: block;
+    margin-top: rem(15px);
+
+  }
+}
+
+
+// .card__hour
+
+&__hour {
+  font-size: rem(32px);
+  font-family: "Rubik Light";
+  @media (min-width: 1024px) {
+    font-size: 56px;
+
+  }
+}
+
+// .card__last-time
+
+&__last-time {
+  color: #BBC0FF;
+  font-size: 15px;
+  @media (min-width: 1024px) {
+   
+    margin-top: rem(8px);
+  }
+}
+}
+
+.active {
+  color: #fff;
+}
