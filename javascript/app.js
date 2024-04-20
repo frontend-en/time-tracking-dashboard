@@ -9,19 +9,19 @@ const monthly = cards.querySelector('button[data-b="3"]');
 const getImg = (element) => {
   switch (element.title) {
     case 'Work':
-      return { img: '/images/icon-work.svg', bg: 'linear-gradient(180deg, rgba(255,139,96,1) 50%, rgba(14,19,35,1) 50%)' };
+      return { img: 'images/icon-work.svg', bg: 'linear-gradient(180deg, rgba(255,139,96,1) 50%, rgba(14,19,35,1) 50%)' };
     case 'Play':
-      return { img: '/images/icon-play.svg', bg: 'linear-gradient(180deg, rgba(85,194,230,1) 50%, rgba(14,19,35,1) 50%)' };
+      return { img: 'images/icon-play.svg', bg: 'linear-gradient(180deg, rgba(85,194,230,1) 50%, rgba(14,19,35,1) 50%)' };
     case 'Study':
-      return { img: '/images/icon-study.svg', bg: 'linear-gradient(180deg, rgba(255,94,125,1) 50%, rgba(14,19,35,1) 50%)' };
+      return { img: 'images/icon-study.svg', bg: 'linear-gradient(180deg, rgba(255,94,125,1) 50%, rgba(14,19,35,1) 50%)' };
 
     case 'Exercise':
-      return { img: '/images/icon-exercise.svg', bg: 'linear-gradient(180deg, rgba(75,207,130,1) 50%, rgba(14,19,35,1) 50%)' };
+      return { img: 'images/icon-exercise.svg', bg: 'linear-gradient(180deg, rgba(75,207,130,1) 50%, rgba(14,19,35,1) 50%)' };
 
     case 'Social':
-      return { img: '/images/icon-social.svg', bg: 'linear-gradient(180deg, rgba(115,53,210,1) 50%, rgba(14,19,35,1) 50%)' };
+      return { img: 'images/icon-social.svg', bg: 'linear-gradient(180deg, rgba(115,53,210,1) 50%, rgba(14,19,35,1) 50%)' };
     case 'Self Care':
-      return { img: '/images/icon-self-care.svg', bg: 'linear-gradient(180deg, rgba(241,199,91,1) 50%, rgba(14,19,35,1) 50%)' };
+      return { img: 'images/icon-self-care.svg', bg: 'linear-gradient(180deg, rgba(241,199,91,1) 50%, rgba(14,19,35,1) 50%)' };
 
     default:
       return { img: '', bg: '' };
